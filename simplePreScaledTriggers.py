@@ -11,57 +11,94 @@ import sys
 import os
 from plottingUtils import *
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # HLT_HT600_v1Pre_1_HLT_HT300_v9Pre_210
 def main():
-  c1 = Print("25GeVfromHT300.pdf")
+  c1 = Print("HT400Investigation.pdf")
   c1.open()
   # c1.Print()
   settings = {
-  # "HLT_HT350_v8_HLT_HT250_v8": ("HLT_HT350_v8Pre_280_HLT_HT250_v8Pre_1400","HLT_HT350_v8Pre_200_HLT_HT250_v8Pre_580","HLT_HT350_v8Pre_70_HLT_HT250_v8Pre_350",),
-  # "HLT_HT400_v8_HLT_HT250_v8": ("HLT_HT400_v8Pre_25_HLT_HT250_v8Pre_150","HLT_HT400_v8Pre_105_HLT_HT250_v8Pre_1050","HLT_HT400_v8Pre_140_HLT_HT250_v8Pre_1400"),
-# "HLT_HT300_v*_HLT_HT250_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT300_v*_HLT_HT300_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT350_v*_HLT_HT250_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT350_v*_HLT_HT300_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT350_v2_HLT_HT250_v2":  ("HT_Nom","HT_Denom"),
-# "HLT_HT350_v3_HLT_HT250_v3":  ("HT_Nom","HT_Denom"),
-# "HLT_HT350_v4_HLT_HT250_v4":  ("HT_Nom","HT_Denom"),
-# "HLT_HT350_v5_HLT_HT250_v5":  ("HT_Nom","HT_Denom"),
-# "HLT_HT350_v6_HLT_HT250_v6":  ("HT_Nom","HT_Denom"),
-# "HLT_HT350_v7_HLT_HT250_v7":  ("HT_Nom","HT_Denom"),
-# "HLT_HT350_v8_HLT_HT250_v8":  ("HT_Nom","HT_Denom"),
-# "HLT_HT400_v*_HLT_HT250_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT400_v*_HLT_HT300_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT450_v*_HLT_HT250_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT450_v*_HLT_HT300_v*":  ("HT_Nom","HT_Denom"),
-"HLT_HT450_v2_HLT_HT300_v3":  ("HT_Nom","HT_Denom"),
-"HLT_HT450_v3_HLT_HT300_v4":  ("HT_Nom","HT_Denom"),
-"HLT_HT450_v4_HLT_HT300_v5":  ("HT_Nom","HT_Denom"),
-"HLT_HT450_v5_HLT_HT300_v6":  ("HT_Nom","HT_Denom"),
-"HLT_HT450_v6_HLT_HT300_v7":  ("HT_Nom","HT_Denom"),
-"HLT_HT450_v7_HLT_HT300_v8":  ("HT_Nom","HT_Denom"),
-"HLT_HT450_v8_HLT_HT300_v9":  ("HT_Nom","HT_Denom"),
-# "HLT_HT500_v*_HLT_HT250_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT500_v*_HLT_HT300_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT550_v*_HLT_HT250_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT550_v*_HLT_HT300_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT550_v2_HLT_HT350_v2":  ("HT_Nom","HT_Denom"),
-# "HLT_HT550_v3_HLT_HT350_v3":  ("HT_Nom","HT_Denom"),
-# "HLT_HT550_v4_HLT_HT350_v4":  ("HT_Nom","HT_Denom"),
-# "HLT_HT550_v5_HLT_HT350_v5":  ("HT_Nom","HT_Denom"),
-# "HLT_HT550_v6_HLT_HT350_v6":  ("HT_Nom","HT_Denom"),
-# "HLT_HT550_v7_HLT_HT350_v7":  ("HT_Nom","HT_Denom"),
-# "HLT_HT550_v8_HLT_HT350_v8":  ("HT_Nom","HT_Denom"),
-# "HLT_HT600_v*_HLT_HT250_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT600_v*_HLT_HT300_v*":  ("HT_Nom","HT_Denom"),
-# "HLT_HT600_v1_HLT_HT350_v8":  ("HT_Nom","HT_Denom"),
+# : ("HLT_HT350_v8Pre_280_HLT_HT250_v8Pre_1400","HLT_HT350_v8Pre_200_HLT_HT250_v8Pre_580","HLT_HT350_v8Pre_70_HLT_HT250_v8Pre_350",),
+# : ("HLT_HT400_v8Pre_25_HLT_HT250_v8Pre_150","HLT_HT400_v8Pre_105_HLT_HT250_v8Pre_1050","HLT_HT400_v8Pre_140_HLT_HT250_v8Pre_1400"),
 
+# "HLT_HT350_v11_HLT_HT250_v11":  ("HT_Nom","HT_Denom"),
+# "HLT_HT350_v2_HLT_HT250_v2"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT350_v3_HLT_HT250_v3"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT350_v4_HLT_HT250_v4"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT350_v5_HLT_HT250_v5"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT350_v6_HLT_HT250_v6"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT350_v7_HLT_HT250_v7"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT350_v8_HLT_HT250_v8"  :  ("HT_Nom","HT_Denom"),
+"HLT_HT400_v11_HLT_HT250_v11":  ("HT_Nom","HT_Denom"),
+"HLT_HT400_v2_HLT_HT250_v2"  :  ("HT_Nom","HT_Denom"),
+"HLT_HT400_v3_HLT_HT250_v3"  :  ("HT_Nom","HT_Denom"),
+"HLT_HT400_v4_HLT_HT250_v4"  :  ("HT_Nom","HT_Denom"),
+"HLT_HT400_v5_HLT_HT250_v5"  :  ("HT_Nom","HT_Denom"),
+"HLT_HT400_v6_HLT_HT250_v6"  :  ("HT_Nom","HT_Denom"),
+"HLT_HT400_v7_HLT_HT250_v7"  :  ("HT_Nom","HT_Denom"),
+"HLT_HT400_v8_HLT_HT250_v8"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT450_v11_HLT_HT250_v11":  ("HT_Nom","HT_Denom"),
+# "HLT_HT450_v2_HLT_HT250_v2"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT450_v3_HLT_HT250_v3"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT450_v4_HLT_HT250_v4"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT450_v5_HLT_HT250_v5"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT450_v6_HLT_HT250_v6"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT450_v7_HLT_HT250_v7"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT450_v8_HLT_HT250_v8"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT550_v11_HLT_HT250_v11":  ("HT_Nom","HT_Denom"),
+# "HLT_HT550_v2_HLT_HT250_v2"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT550_v3_HLT_HT250_v3"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT550_v4_HLT_HT250_v4"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT550_v5_HLT_HT250_v5"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT550_v6_HLT_HT250_v6"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT550_v7_HLT_HT250_v7"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT550_v8_HLT_HT250_v8"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT600_v1_HLT_HT250_v8"  :  ("HT_Nom","HT_Denom"),
+# "HLT_HT600_v4_HLT_HT250_v11" :  ("HT_Nom","HT_Denom"),
+# "HLT_HT750_v3_HLT_HT250_v11" :  ("HT_Nom","HT_Denom"),
 
-
-
-
-  # "HLT_HT250_v*_HLT_HT150_v*": ("HT_Nom","HT_Denom"),
-  # "HLT_HT250_v*_HLT_HT200_v*": ("HT_Nom","HT_Denom"),
   # "HLT_HT300_v*_HLT_HT200_v*": ("HT_Nom","HT_Denom"),
   # "HLT_HT300_v*_HLT_HT250_v*": ("HT_Nom","HT_Denom"),
   # "HLT_HT300_v*_HLT_HT250_v*": ("HT_Nom","HT_Denom"),
@@ -92,14 +129,15 @@ def main():
       mg = None
       c1.cd()
       c1.Clear()
-      Nom   = GetSumHist(File = ["ROBREQUEST.root"], Directories = [key], Hist = histList[0], Col = r.kBlack, Norm = None, LegendText = "")
+      Nom   = GetSumHist(File = ["4fbHTTriggers.root"], Directories = [key], Hist = histList[0], Col = r.kBlack, Norm = None, LegendText = "")
       Nom.HideOverFlow()
-      Denom = GetSumHist(File = ["ROBREQUEST.root"], Directories = [key], Hist = histList[1], Col = r.kRed,  Norm = None, LegendText = "")
+      Denom = GetSumHist(File = ["4fbHTTriggers.root"], Directories = [key], Hist = histList[1], Col = r.kRed,  Norm = None, LegendText = "")
       Denom.HideOverFlow()
       Nom.Rebin(25,None)
       Denom.Rebin(25,None)
-      Nom.hObj.GetXaxis().SetRangeUser(0.,800.)
-      Denom.hObj.GetXaxis().SetRangeUser(0.,800.)
+      Nom.hObj.GetXaxis().SetRangeUser(0.,1200.)
+      Denom.hObj.GetXaxis().SetRangeUser(0.,1200.)
+      Denom.hObj.SetTitle(key)
       Denom.Draw("h")
       Denom.hObj.GetXaxis().SetTitle("H_{T} (GeV)")
       Denom.hObj.GetYaxis().SetTitle("Number of Trigger events / %d GeV"%(Denom.hObj.GetBinWidth(1)))
@@ -112,7 +150,7 @@ def main():
       c1.toFile(Denom.hObj,"Denom_Standard_"+key)
       turnon = TurnOn(Nom,Denom)
       # c1.Clear()
-      turnon.setRange(0.,800.)
+      turnon.setRange(0.,1200.)
       c1.cd()
       turnon.DifferentialTurnOn().Draw("ap")
       diffList.append(turnon.DifferentialTurnOn())
@@ -133,13 +171,15 @@ def main():
       cumuTurnOn.GetXaxis().SetTitleSize(0.05)
       cumuTurnOn.GetYaxis().SetTitle("Cumulative efficiency")
       cumuTurnOn.GetYaxis().SetTitleOffset(1.5)
-      cumuTurnOn.GetXaxis().SetRangeUser(0.,800.)
+      cumuTurnOn.GetXaxis().SetRangeUser(0.,1200.)
       cumuTurnOn.SetMarkerStyle(20)
       cumuTurnOn.SetMarkerSize(0.5)
       cumuList.append(cumuTurnOn)
       c1.toFile(cumNom,"CumuNom_"+key)
       c1.toFile(cumDenom,"CumuDenom_"+key)
+      cumuTurnOn.SetTitle("CumuTuronOn_"+key)
       cumuTurnOn.Draw("ap")
+      c1.Print()
       c1.toFile(cumuTurnOn,"Cumulative_%s"%(key))
       c1.Clear()
       # for a in cumuTurnOn.logEffs():
@@ -169,7 +209,7 @@ def main():
     col1 +=1
     mg.Add(g)
   mg.Draw("ap")
-  mg.GetXaxis().SetRangeUser(0.,800.)
+  mg.GetXaxis().SetRangeUser(0.,1200.)
   c1.Print()
 
   mg2 = r.TMultiGraph()
@@ -196,7 +236,7 @@ def main():
     col2 +=1
     mg2.Add(g)
   mg2.Draw("ap")
-  mg2.GetXaxis().SetRangeUser(0.,800.)
+  mg2.GetXaxis().SetRangeUser(0.,1200.)
   c1.Print()
   c1.close()
   pass

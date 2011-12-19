@@ -13,44 +13,72 @@ from plottingUtils import *
 
 # HLT_HT600_v1Pre_1_HLT_HT300_v9Pre_210
 def main():
-  c1 = Print("SignalTriggersOut.pdf")
+  c1 = Print("HT875_NewData.pdf")
   c1.open()
   # c1.Print()
   settings = {
-"HLT_HT250_AlphaT0p55_v1_HLT_Mu5_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT250_AlphaT0p55_v2_HLT_Mu8_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT250_AlphaT0p53_v2_HLT_Mu15_HT200_v2":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT250_AlphaT0p53_v3_HLT_Mu15_HT200_v3":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT250_AlphaT0p53_v4_HLT_Mu15_HT200_v4":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT250_AlphaT0p53_v5_HLT_Mu30_HT200_v1":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT250_AlphaT0p53_v6_HLT_Mu40_HT200_v4":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT250_AlphaT0p55_v2_HLT_Mu40_HT200_v4":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT300_AlphaT0p52_v1_HLT_Mu5_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT300_AlphaT0p52_v2_HLT_Mu8_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT300_AlphaT0p52_v3_HLT_Mu15_HT200_v2":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT300_AlphaT0p52_v4_HLT_Mu15_HT200_v3":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT300_AlphaT0p52_v5_HLT_Mu15_HT200_v4":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT300_AlphaT0p53_v5_HLT_Mu30_HT200_v1":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT300_AlphaT0p53_v6_HLT_Mu40_HT200_v3":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT300_AlphaT0p53_v6_HLT_Mu40_HT200_v4":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT350_AlphaT0p51_v1_HLT_Mu5_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT350_AlphaT0p51_v2_HLT_Mu8_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT350_AlphaT0p51_v3_HLT_Mu15_HT200_v2":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT350_AlphaT0p51_v4_HLT_Mu15_HT200_v3":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT350_AlphaT0p51_v5_HLT_Mu15_HT200_v4":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT350_AlphaT0p52_v1_HLT_Mu30_HT200_v1":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT350_AlphaT0p52_v2_HLT_Mu40_HT200_v3":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT350_AlphaT0p52_v2_HLT_Mu40_HT200_v4":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT400_AlphaT0p51_v1_HLT_Mu5_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT400_AlphaT0p51_v2_HLT_Mu8_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT400_AlphaT0p51_v3_HLT_Mu15_HT200_v2":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT400_AlphaT0p51_v4_HLT_Mu15_HT200_v3":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT400_AlphaT0p51_v5_HLT_Mu15_HT200_v4":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT400_AlphaT0p51_v6_HLT_Mu30_HT200_v1":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT400_AlphaT0p51_v7_HLT_Mu40_HT200_v3":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT400_AlphaT0p51_v7_HLT_Mu40_HT200_v4":("AlphaT_Nom","AlphaT_Denom"),
-"HLT_HT250_AlphaT0p55_v*_HLT_Mu40_HT200_v*":("AlphaT_Nom","AlphaT_Denom"),
-
+# "HT275_HLT_HT250_AlphaT0p53_v2_HLT_Mu15_HT200_v2" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT275_HLT_HT250_AlphaT0p53_v3_HLT_Mu15_HT200_v3" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT275_HLT_HT250_AlphaT0p53_v4_HLT_Mu15_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT275_HLT_HT250_AlphaT0p53_v5_HLT_Mu30_HT200_v1" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT275_HLT_HT250_AlphaT0p53_v6_HLT_Mu40_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT275_HLT_HT250_AlphaT0p55_v1_HLT_Mu5_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT275_HLT_HT250_AlphaT0p55_v2_HLT_Mu40_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT325_HLT_HT300_AlphaT0p52_v1_HLT_Mu5_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT325_HLT_HT300_AlphaT0p52_v2_HLT_Mu8_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT325_HLT_HT300_AlphaT0p52_v3_HLT_Mu15_HT200_v2" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT325_HLT_HT300_AlphaT0p52_v4_HLT_Mu15_HT200_v3" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT325_HLT_HT300_AlphaT0p52_v5_HLT_Mu15_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT325_HLT_HT300_AlphaT0p53_v5_HLT_Mu30_HT200_v1" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT325_HLT_HT300_AlphaT0p53_v6_HLT_Mu40_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT375_HLT_HT350_AlphaT0p51_v1_HLT_Mu5_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT375_HLT_HT350_AlphaT0p51_v2_HLT_Mu8_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT375_HLT_HT350_AlphaT0p51_v3_HLT_Mu15_HT200_v2" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT375_HLT_HT350_AlphaT0p51_v4_HLT_Mu15_HT200_v3" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT375_HLT_HT350_AlphaT0p51_v5_HLT_Mu15_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT375_HLT_HT350_AlphaT0p52_v1_HLT_Mu30_HT200_v1" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT375_HLT_HT350_AlphaT0p52_v2_HLT_Mu40_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT375_HLT_HT350_AlphaT0p53_v10_HLT_Mu40_HT300_v5":("AlphaT_Nom","AlphaT_Denom"),
+# "HT475_HLT_HT400_AlphaT0p51_v10_HLT_Mu40_HT300_v5":("AlphaT_Nom","AlphaT_Denom"),
+# "HT475_HLT_HT400_AlphaT0p51_v1_HLT_Mu5_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT475_HLT_HT400_AlphaT0p51_v2_HLT_Mu8_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT475_HLT_HT400_AlphaT0p51_v3_HLT_Mu15_HT200_v2" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT475_HLT_HT400_AlphaT0p51_v4_HLT_Mu15_HT200_v3" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT475_HLT_HT400_AlphaT0p51_v5_HLT_Mu15_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT475_HLT_HT400_AlphaT0p51_v6_HLT_Mu30_HT200_v1" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT475_HLT_HT400_AlphaT0p51_v7_HLT_Mu40_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT575_HLT_HT400_AlphaT0p51_v10_HLT_Mu40_HT300_v5":("AlphaT_Nom","AlphaT_Denom"),
+# "HT575_HLT_HT400_AlphaT0p51_v1_HLT_Mu5_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT575_HLT_HT400_AlphaT0p51_v2_HLT_Mu8_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT575_HLT_HT400_AlphaT0p51_v3_HLT_Mu15_HT200_v2" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT575_HLT_HT400_AlphaT0p51_v4_HLT_Mu15_HT200_v3" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT575_HLT_HT400_AlphaT0p51_v5_HLT_Mu15_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT575_HLT_HT400_AlphaT0p51_v6_HLT_Mu30_HT200_v1" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT575_HLT_HT400_AlphaT0p51_v7_HLT_Mu40_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT675_HLT_HT400_AlphaT0p51_v10_HLT_Mu40_HT300_v5":("AlphaT_Nom","AlphaT_Denom"),
+# "HT675_HLT_HT400_AlphaT0p51_v1_HLT_Mu5_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT675_HLT_HT400_AlphaT0p51_v2_HLT_Mu8_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT675_HLT_HT400_AlphaT0p51_v3_HLT_Mu15_HT200_v2" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT675_HLT_HT400_AlphaT0p51_v4_HLT_Mu15_HT200_v3" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT675_HLT_HT400_AlphaT0p51_v5_HLT_Mu15_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT675_HLT_HT400_AlphaT0p51_v6_HLT_Mu30_HT200_v1" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT675_HLT_HT400_AlphaT0p51_v7_HLT_Mu40_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT775_HLT_HT400_AlphaT0p51_v10_HLT_Mu40_HT300_v5":("AlphaT_Nom","AlphaT_Denom"),
+# "HT775_HLT_HT400_AlphaT0p51_v1_HLT_Mu5_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT775_HLT_HT400_AlphaT0p51_v2_HLT_Mu8_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+# "HT775_HLT_HT400_AlphaT0p51_v3_HLT_Mu15_HT200_v2" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT775_HLT_HT400_AlphaT0p51_v4_HLT_Mu15_HT200_v3" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT775_HLT_HT400_AlphaT0p51_v5_HLT_Mu15_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT775_HLT_HT400_AlphaT0p51_v6_HLT_Mu30_HT200_v1" :("AlphaT_Nom","AlphaT_Denom"),
+# "HT775_HLT_HT400_AlphaT0p51_v7_HLT_Mu40_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+"HT875_HLT_HT400_AlphaT0p51_v10_HLT_Mu40_HT300_v5":("AlphaT_Nom","AlphaT_Denom"),
+"HT875_HLT_HT400_AlphaT0p51_v1_HLT_Mu5_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+"HT875_HLT_HT400_AlphaT0p51_v2_HLT_Mu8_HT200_v4"  :("AlphaT_Nom","AlphaT_Denom"),
+"HT875_HLT_HT400_AlphaT0p51_v3_HLT_Mu15_HT200_v2" :("AlphaT_Nom","AlphaT_Denom"),
+"HT875_HLT_HT400_AlphaT0p51_v4_HLT_Mu15_HT200_v3" :("AlphaT_Nom","AlphaT_Denom"),
+"HT875_HLT_HT400_AlphaT0p51_v5_HLT_Mu15_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
+"HT875_HLT_HT400_AlphaT0p51_v6_HLT_Mu30_HT200_v1" :("AlphaT_Nom","AlphaT_Denom"),
+"HT875_HLT_HT400_AlphaT0p51_v7_HLT_Mu40_HT200_v4" :("AlphaT_Nom","AlphaT_Denom"),
   }
   diffList = []
   cumuList = []
@@ -60,17 +88,17 @@ def main():
       mg = None
       c1.cd()
       c1.Clear()
-      Nom   = GetSumHist(File = ["SignalTrigger.root"], Directories = [key], Hist = histList[0], Col = r.kBlack, Norm = None, LegendText = "")
+      Nom   = GetSumHist(File = ["MuHad_signal_ht375.root"], Directories = [key], Hist = histList[0], Col = r.kBlack, Norm = None, LegendText = "")
       Nom.HideOverFlow()
-      Denom = GetSumHist(File = ["SignalTrigger.root"], Directories = [key], Hist = histList[1], Col = r.kRed,  Norm = None, LegendText = "")
+      Denom = GetSumHist(File = ["MuHad_signal_ht375.root"], Directories = [key], Hist = histList[1], Col = r.kRed,  Norm = None, LegendText = "")
       Denom.HideOverFlow()
-      Nom.Rebin(25,None)
-      Denom.Rebin(25,None)
-      Nom.hObj.GetXaxis().SetRangeUser(0.,800.)
-      Denom.hObj.GetXaxis().SetRangeUser(0.,800.)
+      # Nom.Rebin(25,None)
+      # Denom.Rebin(25,None)
+      Nom.hObj.GetXaxis().SetRangeUser(0.,1.)
+      Denom.hObj.GetXaxis().SetRangeUser(0.,1.)
       Denom.Draw("h")
-      Denom.hObj.GetXaxis().SetTitle("H_{T} (GeV)")
-      Denom.hObj.GetYaxis().SetTitle("Number of Trigger events / %d GeV"%(Denom.hObj.GetBinWidth(1)))
+      Denom.hObj.GetXaxis().SetTitle("#alpha_{T}")
+      Denom.hObj.GetYaxis().SetTitle("Number of Trigger events / %f"%(Denom.hObj.GetBinWidth(1)))
       Denom.hObj.GetYaxis().SetTitleOffset(1.15)
 
       Nom.hObj.SetMarkerStyle(20)
@@ -80,8 +108,10 @@ def main():
       c1.toFile(Denom.hObj,"Denom_Standard_"+key)
       turnon = TurnOn(Nom,Denom)
       # c1.Clear()
-      turnon.setRange(0.,800.)
+      turnon.setRange(0.,1.)
       c1.cd()
+      turnon.DifferentialTurnOn().GetXaxis().SetRangeUser(0.,1.)
+      turnon.DifferentialTurnOn().SetTitle(key)
       turnon.DifferentialTurnOn().Draw("ap")
       diffList.append(turnon.DifferentialTurnOn())
       c1.toFile(turnon.DifferentialTurnOn(),"Diff_"+key)
@@ -97,17 +127,22 @@ def main():
       c1.Print()
       cumuTurnOn = r.TGraphAsymmErrors()
       cumuTurnOn.Divide(cumNom,cumDenom)
-      cumuTurnOn.GetXaxis().SetTitle("H_{T}^{cut} (GeV)")
+      cumuTurnOn.GetXaxis().SetTitle("#alphat_{T}^{cut} ")
       cumuTurnOn.GetXaxis().SetTitleSize(0.05)
       cumuTurnOn.GetYaxis().SetTitle("Cumulative efficiency")
       cumuTurnOn.GetYaxis().SetTitleOffset(1.5)
-      cumuTurnOn.GetXaxis().SetRangeUser(0.,800.)
+      cumuTurnOn.GetXaxis().SetRangeUser(0.,1.)
+      cumuTurnOn.SetTitle(key)
       cumuTurnOn.SetMarkerStyle(20)
       cumuTurnOn.SetMarkerSize(0.5)
+      cumuTurnOn.SetTitle(key)
       cumuList.append(cumuTurnOn)
       c1.toFile(cumNom,"CumuNom_"+key)
       c1.toFile(cumDenom,"CumuDenom_"+key)
       cumuTurnOn.Draw("ap")
+      cumuTurnOn.GetXaxis().SetRangeUser(0.,1.)
+      c1.canvas.Update()
+      c1.Print()
       c1.toFile(cumuTurnOn,"Cumulative_%s"%(key))
       c1.Clear()
       # for a in cumuTurnOn.logEffs():
@@ -125,7 +160,8 @@ def main():
     col1 +=1
     mg.Add(g)
   mg.Draw("ap")
-  mg.GetXaxis().SetRangeUser(0.,800.)
+  mg.GetXaxis().SetRangeUser(0.,1.)
+  c1.canvas.Update()
   c1.Print()
 
   mg2 = r.TMultiGraph()
@@ -139,7 +175,8 @@ def main():
     col2 +=1
     mg2.Add(g)
   mg2.Draw("ap")
-  mg2.GetXaxis().SetRangeUser(0.,800.)
+  mg2.GetXaxis().SetRangeUser(0.,1.)
+  c1.canvas.Update()
   c1.Print()
   c1.close()
   pass
