@@ -27,9 +27,9 @@ def findHTEff(File = None, SearchString = None, Value = None):
 def main():
   pass
     # Ok now we create the FINAL PLOT!!!(s)
-    # This plot(s) is the two dimensional (HT/ALPHAT) plot showing our efficiency in each bin. Has to be taken from the Differential plots
-  inFile = open("./EfficienciesForAllDiffPlotFinalAlphaTPlotBinning.txt")
-  alphaTbins = [0.51,0.52,0.53,0.55,0.60,0.61]#[0.5+0.01*i for i in range(12)]#
+    # This plot(s) is the two dimensional (HT/ALPHAT) plot showing our efficiency in each bin. Has to be taken from the differential plots
+  inFile = open("./EfficienciesForAllDiffPlot.txt")
+  alphaTbins = [0.5+0.01*i for i in range(12)]
   HTbins = [275.,325.,]+[375+100*i for i in range(7)]
   FinalPlot = r.TH2D("finalPlot","",len(HTbins)-1,array.array('d',HTbins),len(alphaTbins)-1,array.array('d',alphaTbins))
   FinalPlot.GetXaxis().SetTitle("H_{T} (GeV)")
@@ -56,14 +56,15 @@ def main():
   ErrorDown.GetYaxis().SetTitleOffset(.85)
   for line in inFile.readlines():
     if "AlphaT" in line:
-      print line.split(" ")
+      # print line.split(" ")
 
       linearray = line.split(" ")
       HT = float((line.split(" ")[0])[2:5])
       # print type(HT)
       scalefactor = 1.0# findHTEff(File = "./EfficienciesForAll.txt", SearchString = "AllFrom" if int(HT-25.) > 400 else "HT375", Value = HT-25.)
       AlphaT = float(linearray[2])
-      bin = FinalPlot.FindBin(float((line.split(" ")[0])[2:5]),AlphaT)
+      if AlphaT > 0.65: continue
+      bin = FinalPlot.FindBin(float((line.split(" ")[0])[2:5]),AlphaT+0.005)
       # print "AlphaT = %f, HT = %f, Eff = %f, Bin = %d, %s"%(AlphaT,HT,float(linearray[3]),bin,linearray[:-1])
       FinalPlot.SetBinContent(bin,float(linearray[3])*100.*scalefactor)
       ErrorUp.SetBinContent(bin,float(linearray[5])*100.)
@@ -83,16 +84,16 @@ def main():
   FinalPlot.Draw("COLZtext")
 
   # raw_input()
-  c2.SaveAs("FINALPLOTREBINTestDiff5456.pdf")
+  c2.SaveAs("FINALPLOTDiff.pdf")
   ErrorUp.Draw("COLZtext")
   ErrorUp.GetZaxis().SetTitle("Positive error (%)")
   ErrorUp.GetZaxis().SetTitleOffset(1.07)
   ErrorUp.GetZaxis().SetRangeUser(0.0,ErrorUp.GetMaximum()*1.01)
-  c2.SaveAs("FinalPlotErrorUpREBINTestDiff5456.pdf")
+  c2.SaveAs("FinalPlotErrorUpDiff.pdf")
   ErrorDown.Draw("COLZtext")
   ErrorDown.GetZaxis().SetTitle("Negitive error (%)")
   ErrorDown.GetZaxis().SetTitleOffset(1.07)
-  c2.SaveAs("FinalPlotErrorDownREBINTestDiff5456.pdf")
+  c2.SaveAs("FinalPlotErrorDownDiff.pdf")
 
 
 if __name__ == '__main__':
