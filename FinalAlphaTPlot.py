@@ -63,6 +63,7 @@ def main():
       # print type(HT)
       scalefactor = 1.0# findHTEff(File = "./EfficienciesForAll.txt", SearchString = "AllFrom" if int(HT-25.) > 400 else "HT375", Value = HT-25.)
       AlphaT = float(linearray[2])
+      # if AlphaT > 0.61: AlphaT = 0.605
       bin = FinalPlot.FindBin(float((line.split(" ")[0])[2:5]),AlphaT)
       # print "AlphaT = %f, HT = %f, Eff = %f, Bin = %d, %s"%(AlphaT,HT,float(linearray[3]),bin,linearray[:-1])
       FinalPlot.SetBinContent(bin,float(linearray[3])*100.*scalefactor)
@@ -83,16 +84,16 @@ def main():
   FinalPlot.Draw("COLZtext")
 
   # raw_input()
-  c2.SaveAs("FINALPLOTREBINTestDiff5456.pdf")
+  c2.SaveAs("./useHadAlphaT/FINALPLOTREBINTestDiff5456.pdf")
   ErrorUp.Draw("COLZtext")
   ErrorUp.GetZaxis().SetTitle("Positive error (%)")
   ErrorUp.GetZaxis().SetTitleOffset(1.07)
   ErrorUp.GetZaxis().SetRangeUser(0.0,ErrorUp.GetMaximum()*1.01)
-  c2.SaveAs("FinalPlotErrorUpREBINTestDiff5456.pdf")
+  c2.SaveAs("./useHadAlphaT/FinalPlotErrorUpREBINTestDiff5456.pdf")
   ErrorDown.Draw("COLZtext")
   ErrorDown.GetZaxis().SetTitle("Negitive error (%)")
   ErrorDown.GetZaxis().SetTitleOffset(1.07)
-  c2.SaveAs("FinalPlotErrorDownREBINTestDiff5456.pdf")
+  c2.SaveAs("./useHadAlphaT/FinalPlotErrorDownREBINTestDiff5456.pdf")
 
 
 if __name__ == '__main__':
