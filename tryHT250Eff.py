@@ -118,6 +118,7 @@ def main():
 
   weightList =[15.,25.,35.,150.,200.,90.,150.,200.,240.,60.,180.,200.,400.,200.,150.,200.,290.,85.]
   c1 = Print("HT250Try.pdf")
+  c1.DoPageNum = False
   c1.open()
   rFile = r.TFile().Open("./5GeVMuonsVBTFIDWithOddMuonVeto/5GeVMuonsOddVetoVBTFidHT275.root")
   nomHist = None
@@ -129,7 +130,7 @@ def main():
     currentHist = curFile.Get(hist)
     print currentHist.GetName()
     print type(currentHist)
-    currentHist.Rebin(25)
+    # currentHist.Rebin(25)
     for bin in range(currentHist.GetNbinsX()):
       error = math.sqrt(((currentHist.GetBinContent(bin)+1)*weight)-1)
       value = currentHist.GetBinContent(bin)*weight
@@ -145,7 +146,7 @@ def main():
   for dir,hist in zip(dirList,histList2):
     curFile = rFile.Get(dir)
     currentDenom = curFile.Get(hist)
-    currentDenom.Rebin(25)
+    # currentDenom.Rebin(25)
     for bin in range(currentDenom.GetNbinsX()):
       if currentDenom.GetBinContent(bin) < 10.:
         n = int(currentDenom.GetBinContent(bin))
@@ -167,10 +168,17 @@ def main():
   denomHist.SetLineColor(2)
   nomHist.Draw("p")
   nomHist.SetTitle("")
+
   denomHist.Draw("sameh")
+  denomHist.Rebin(2,"a",array.array('d',[0.,275.,300.]))
   c1.Print()
-  a = nomHist.Clone()
-  a.Divide(denomHist)
+  bins = [i*25. for i in range(int(275./25.)) ]+[275.,1000.]
+  a = nomHist.Rebin(len(bins) -1 ,"a",array.array('d',  bins))
+  b = denomHist.Rebin(len(bins) - 1,"b",array.array('d',bins))
+  a.Divide(b)
+  a.GetXaxis().SetTitle("H_{T} (GeV)")
+  a.GetYaxis().SetTitle("Efficiency")
+  a.SetTitle("")
   a.Draw("p")
   a.GetYaxis().SetRangeUser(0.,1.2)
   c1.Print()

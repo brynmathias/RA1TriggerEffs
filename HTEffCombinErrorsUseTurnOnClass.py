@@ -20,18 +20,20 @@ def main():
   sums ={
 
 #
-"HT375":(["HLT_HT350_v11_HLT_HT250_v11","HLT_HT350_v2_HLT_HT250_v2","HLT_HT350_v3_HLT_HT250_v3","HLT_HT350_v4_HLT_HT250_v4","HLT_HT350_v5_HLT_HT250_v5","HLT_HT350_v6_HLT_HT250_v6","HLT_HT350_v7_HLT_HT250_v7","HLT_HT350_v8_HLT_HT250_v8"],"./noOddMuonVeto/ht375HadNoOddMuon.root"),
-#   "HT475":(["HLT_HT450_v11_HLT_HT250_v11","HLT_HT450_v2_HLT_HT250_v2","HLT_HT450_v3_HLT_HT250_v3","HLT_HT450_v4_HLT_HT250_v4","HLT_HT450_v5_HLT_HT250_v5","HLT_HT450_v6_HLT_HT250_v6","HLT_HT450_v7_HLT_HT250_v7","HLT_HT450_v8_HLT_HT250_v8",],"./noOddMuonVeto/ht375HadNoOddMuon.root"),
-#   "HT575":(["HLT_HT550_v11_HLT_HT250_v11","HLT_HT550_v2_HLT_HT250_v2","HLT_HT550_v3_HLT_HT250_v3","HLT_HT550_v4_HLT_HT250_v4","HLT_HT550_v5_HLT_HT250_v5","HLT_HT550_v6_HLT_HT250_v6","HLT_HT550_v7_HLT_HT250_v7","HLT_HT550_v8_HLT_HT250_v8",],"./noOddMuonVeto/ht375HadNoOddMuon.root"),
-#   "HT675":(["HLT_HT550_v2_HLT_HT250_v2","HLT_HT550_v3_HLT_HT250_v3","HLT_HT550_v4_HLT_HT250_v4","HLT_HT550_v5_HLT_HT250_v5","HLT_HT550_v6_HLT_HT250_v6","HLT_HT550_v7_HLT_HT250_v7","HLT_HT600_v1_HLT_HT250_v8","HLT_HT600_v4_HLT_HT250_v11",],"./noOddMuonVeto/ht375HadNoOddMuon.root"),
-#   "HT775":(["HLT_HT550_v2_HLT_HT250_v2","HLT_HT550_v3_HLT_HT250_v3","HLT_HT550_v4_HLT_HT250_v4","HLT_HT550_v5_HLT_HT250_v5","HLT_HT550_v6_HLT_HT250_v6","HLT_HT550_v7_HLT_HT250_v7","HLT_HT600_v1_HLT_HT250_v8","HLT_HT700_v2_HLT_HT250_v11",],"./noOddMuonVeto/ht375HadNoOddMuon.root"),
-#   "HT875":(["HLT_HT550_v2_HLT_HT250_v2","HLT_HT550_v3_HLT_HT250_v3","HLT_HT550_v4_HLT_HT250_v4","HLT_HT550_v5_HLT_HT250_v5","HLT_HT550_v6_HLT_HT250_v6","HLT_HT550_v7_HLT_HT250_v7","HLT_HT600_v1_HLT_HT250_v8","HLT_HT750_v3_HLT_HT250_v11",],"./noOddMuonVeto/ht375HadNoOddMuon.root"),
+# "HT375":(["HLT_HT350_v11_HLT_HT250_v11","HLT_HT350_v2_HLT_HT250_v2","HLT_HT350_v3_HLT_HT250_v3","HLT_HT350_v4_HLT_HT250_v4","HLT_HT350_v5_HLT_HT250_v5","HLT_HT350_v6_HLT_HT250_v6","HLT_HT350_v7_HLT_HT250_v7","HLT_HT350_v8_HLT_HT250_v8"],
+# "./useHadAlphaT/ht375HadNoOddMuon.root"),
+  # "HT475":(["HLT_HT450_v11_HLT_HT250_v11","HLT_HT450_v2_HLT_HT250_v2","HLT_HT450_v3_HLT_HT250_v3","HLT_HT450_v4_HLT_HT250_v4","HLT_HT450_v5_HLT_HT250_v5","HLT_HT450_v6_HLT_HT250_v6","HLT_HT450_v7_HLT_HT250_v7","HLT_HT450_v8_HLT_HT250_v8",],".//ht375HadNoOddMuon.root"),
+#   "HT575":(["HLT_HT550_v11_HLT_HT250_v11","HLT_HT550_v2_HLT_HT250_v2","HLT_HT550_v3_HLT_HT250_v3","HLT_HT550_v4_HLT_HT250_v4","HLT_HT550_v5_HLT_HT250_v5","HLT_HT550_v6_HLT_HT250_v6","HLT_HT550_v7_HLT_HT250_v7","HLT_HT550_v8_HLT_HT250_v8",],".//ht375HadNoOddMuon.root"),
+#   "HT675":(["HLT_HT550_v2_HLT_HT250_v2","HLT_HT550_v3_HLT_HT250_v3","HLT_HT550_v4_HLT_HT250_v4","HLT_HT550_v5_HLT_HT250_v5","HLT_HT550_v6_HLT_HT250_v6","HLT_HT550_v7_HLT_HT250_v7","HLT_HT600_v1_HLT_HT250_v8","HLT_HT600_v4_HLT_HT250_v11",],".//ht375HadNoOddMuon.root"),
+#   "HT775":(["HLT_HT550_v2_HLT_HT250_v2","HLT_HT550_v3_HLT_HT250_v3","HLT_HT550_v4_HLT_HT250_v4","HLT_HT550_v5_HLT_HT250_v5","HLT_HT550_v6_HLT_HT250_v6","HLT_HT550_v7_HLT_HT250_v7","HLT_HT600_v1_HLT_HT250_v8","HLT_HT700_v2_HLT_HT250_v11",],".//ht375HadNoOddMuon.root"),
+#   "HT875":(["HLT_HT550_v2_HLT_HT250_v2","HLT_HT550_v3_HLT_HT250_v3","HLT_HT550_v4_HLT_HT250_v4","HLT_HT550_v5_HLT_HT250_v5","HLT_HT550_v6_HLT_HT250_v6","HLT_HT550_v7_HLT_HT250_v7","HLT_HT600_v1_HLT_HT250_v8","HLT_HT750_v3_HLT_HT250_v11",],".//ht375HadNoOddMuon.root"),
 #
-"AllFromHT400":(["HLT_HT400_v2_HLT_HT250_v2","HLT_HT400_v3_HLT_HT250_v3","HLT_HT400_v4_HLT_HT250_v4","HLT_HT400_v5_HLT_HT250_v5","HLT_HT400_v6_HLT_HT250_v6","HLT_HT400_v7_HLT_HT250_v7","HLT_HT400_v8_HLT_HT250_v8","HLT_HT400_v11_HLT_HT250_v11"],"./noOddMuonVeto/ht375HadNoOddMuon.root"),
+# "AllFromHT400":(["HLT_HT400_v2_HLT_HT250_v2","HLT_HT400_v3_HLT_HT250_v3","HLT_HT400_v4_HLT_HT250_v4","HLT_HT400_v5_HLT_HT250_v5",
+# "HLT_HT400_v6_HLT_HT250_v6","HLT_HT400_v7_HLT_HT250_v7","HLT_HT400_v8_HLT_HT250_v8","HLT_HT400_v11_HLT_HT250_v11"],"./useHadAlphaT/ht375HadNoOddMuon.root"),
 
 "HT275AlphaT":([
 "HT275_HLT_HT250_AlphaT0p55_v1_HLT_Mu5_HT200_v4","HT275_HLT_HT250_AlphaT0p55_v2_HLT_Mu40_HT200_v4","HT275_HLT_HT250_AlphaT0p53_v2_HLT_Mu15_HT200_v2","HT275_HLT_HT250_AlphaT0p53_v3_HLT_Mu15_HT200_v3","HT275_HLT_HT250_AlphaT0p53_v4_HLT_Mu15_HT200_v4","HT275_HLT_HT250_AlphaT0p53_v5_HLT_Mu30_HT200_v1","DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v4","DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v5","DiMu_HT275_HLT_HT250_AlphaT0p60_v3_HLT_DoubleMu8_Mass8_HT200_v4","DiMu_HT275_HLT_HT250_AlphaT0p60_v3_HLT_DoubleMu8_Mass8_HT200_v5",
-],"./noOddMuonVeto/ht275MuHadNoOddMuon.root"),
+],"./useHadAlphaT/ht275MuHadNoOddMuon.root"),
 "HT325AlphaT":([
 "HT325_HLT_HT300_AlphaT0p52_v1_HLT_Mu5_HT200_v4","HT325_HLT_HT300_AlphaT0p52_v2_HLT_Mu8_HT200_v4","HT325_HLT_HT300_AlphaT0p52_v3_HLT_Mu15_HT200_v2","HT325_HLT_HT300_AlphaT0p53_v3_HLT_Mu15_HT200_v3","HT325_HLT_HT300_AlphaT0p53_v4_HLT_Mu15_HT200_v4","HT325_HLT_HT300_AlphaT0p53_v5_HLT_Mu30_HT200_v1","HT325_HLT_HT300_AlphaT0p53_v6_HLT_Mu40_HT200_v3","HT325_HLT_HT300_AlphaT0p53_v6_HLT_Mu40_HT200_v4","HT325_HLT_HT300_AlphaT0p54_v5_HLT_Mu40_HT300_v4","HT325_HLT_HT300_AlphaT0p54_v5_HLT_Mu40_HT300_v5","DiMu_HT325_HLT_HT300_AlphaT0p55_v3_HLT_DoubleMu8_Mass8_HT200_v4","DiMu_HT325_HLT_HT300_AlphaT0p55_v3_HLT_DoubleMu8_Mass8_HT200_v5",
 ],"./useHadAlphaT/ht325MuHadNoOddMuon.root"),
@@ -73,37 +75,39 @@ def main():
     numeratorList = []
     denominatorList = []
 
-    BinEdges = [0.5,0.51,0.52,0.53,0.55,0.60,2.00]
+    BinEdges = [0.4,0.41,0.42,0.43,0.44,0.45,0.46,0.47,0.48,0.49,0.5,0.51,0.52,0.53,0.55,0.60,0.7]
     for Dir in Dirs[0]:
       # print Dir
       aNom = GetSumHist(File = [Dirs[1]], Directories = [Dir], Hist = histList[0], Col = r.kBlack, Norm = None, LegendText = "")
-      # aNom.HideOverFlow()
-      if "AlphaT" not in key:aNom.Rebin(25,None)
-      # if "AlphaT" in key: aNom.Rebin(len(BinEdges)-1,BinEdges)
-      # print aNom.hObj.Integral()
 
+      if "AlphaT" not in key:aNom.Rebin(25,None)
+      if "AlphaT" in key: aNom.Rebin(len(BinEdges)-1,BinEdges)
+      # print aNom.hObj.Integral()
+      aNom.HideOverFlow()
+      aNom.hObj.SetTitle(Dir)
       numeratorList.append(aNom)
       aDenom =  GetSumHist(File = [Dirs[1]], Directories = [Dir], Hist = histList[1], Col = r.kRed, Norm = None, LegendText = "")
-      # aDenom.HideOverFlow()
       if "AlphaT" not in key:aDenom.Rebin(25,None)
-      # if "AlphaT" in key: aDenom.Rebin(len(BinEdges)-1,BinEdges)
+      if "AlphaT" in key: aDenom.Rebin(len(BinEdges)-1,BinEdges)
+      aDenom.HideOverFlow()
+      aDenom.hObj.SetTitle(Dir)
       # print aDenom.hObj.Integral() , "DENOM INT"
       # if aNom.hObj.Integral() > aDenom.hObj.Integral(): print "ERROR !!!!!!!!!"
 
       denominatorList.append(aDenom)
-    c1 = Print("./useHadAlphaT/HTNewErrors%s.pdf"%(key))
+    c1 = Print("./RobQuestions/ClosedUpperBinEdgesNumberLook_%s.pdf"%(key))
     c1.open()
     DiffNomList = []
     DiffDenomList = []
     CumuNomList = []
     CumuDenomList = []
     for nom,denom in zip(numeratorList,denominatorList):
-      nom.hObj.SetTitle(key)
+      # nom.hObj.SetTitle(nom+denom)
       # print nom.hObj.Integral() , "IN LOOP"
-      denom.hObj.SetTitle(Dir)
-      nom.hObj.SetName(key)
+      # denom.hObj.SetTitle(nom+denom)
+      # nom.hObj.SetName(nom+denom)
       # print nom.hObj.Integral() , "IN LOOP"
-      denom.hObj.SetName(Dir)
+      # denom.hObj.SetName(nom+denom)
       if denom.hObj.Integral() > 0.:
         DiffNomList.append(nom.hObj)
         DiffDenomList.append(denom.hObj)
@@ -114,7 +118,7 @@ def main():
     for nom,denom in zip(DiffTurnOn.numerator,DiffTurnOn.denominator):
       if "alpha" in axisTitle:
         denom.GetYaxis().SetTitle("Events / %1.4f"%(denom.GetBinWidth(1)))
-        denom.GetXaxis().SetRangeUser(0.,3.)
+        denom.GetXaxis().SetRangeUser(0.4,1.)
       if "H_" in axisTitle:
         denom.GetYaxis().SetTitle("Events / %1.f GeV"%(denom.GetBinWidth(1)))
         denom.GetXaxis().SetRangeUser(0.,1000.)
@@ -129,7 +133,7 @@ def main():
     DiffTurnOn.TotDenominator.SetTitle("Total Differential Hists for %s"%(key))
     if "alpha" in axisTitle:
       DiffTurnOn.TotDenominator.GetYaxis().SetTitle("Events / %1.4f"%(DiffTurnOn.TotDenominator.GetBinWidth(1)))
-      DiffTurnOn.TotDenominator.GetXaxis().SetRangeUser(0.,3.)
+      DiffTurnOn.TotDenominator.GetXaxis().SetRangeUser(0.4,1.)
     if "H_" in axisTitle:
       DiffTurnOn.TotDenominator.GetYaxis().SetTitle("Events / %1.f GeV"%(DiffTurnOn.TotDenominator.GetBinWidth(1)))
       DiffTurnOn.TotDenominator.GetXaxis().SetRangeUser(0.,1000.)
@@ -141,7 +145,7 @@ def main():
     c1.Print()
     c1.SetLog('y',False)
     for curve in DiffTurnOn.listOfTurnOns:
-      if"AlphaT" in key: curve.GetXaxis().SetRangeUser(0.,3.)
+      if"AlphaT" in key: curve.GetXaxis().SetRangeUser(0.4,1.)
       else: curve.GetXaxis().SetRangeUser(0.,1000.)
       print "="*25
       print "Differential Turn on for %s"%(Dir)
@@ -156,7 +160,7 @@ def main():
     FinalDiff = DiffTurnOn.SumOfTurnOns()
     FinalDiff.SetTitle("Total Differential Turn on for %s"%(key))
     FinalDiff.GetXaxis().SetTitle(axisTitle)
-    if"AlphaT" in key: FinalDiff.GetXaxis().SetRangeUser(0.,3.)
+    if"AlphaT" in key: FinalDiff.GetXaxis().SetRangeUser(0.4,1.)
     else: FinalDiff.GetXaxis().SetRangeUser(0.,1000.)
     FinalDiff.GetYaxis().SetTitle("Efficiency")
     FinalDiff.GetYaxis().SetTitleOffset(1.15)
@@ -166,11 +170,11 @@ def main():
     xVal = r.Double(0)
     yVal = r.Double(0)
     point = []
-    for gPoint in range(FinalDiff.GetN()):
-      FinalDiff.GetPoint(gPoint,xVal,yVal)
-      if "AlphaT" in key:
-        text +=("%s at %f %1.3f + %1.3f - %1.3f efficient  Differential \n"%(key,xVal,yVal,FinalDiff.GetErrorYhigh(gPoint),FinalDiff.GetErrorYlow(gPoint)))
-      else:text +=("%s at %3.0f %1.3f + %1.3f - %1.3f efficient  Differential \n"%(key,xVal,yVal,FinalDiff.GetErrorYhigh(gPoint),FinalDiff.GetErrorYlow(gPoint)))
+    # for gPoint in range(FinalDiff.GetN()):
+    #   FinalDiff.GetPoint(gPoint,xVal,yVal)
+    #   if "AlphaT" in key:
+    #     text +=("%s at %f %1.3f + %1.3f - %1.3f efficient  Differential \n"%(key,xVal,yVal,FinalDiff.GetErrorYhigh(gPoint),FinalDiff.GetErrorYlow(gPoint)))
+    #   else:text +=("%s at %3.0f %1.3f + %1.3f - %1.3f efficient  Differential \n"%(key,xVal,yVal,FinalDiff.GetErrorYhigh(gPoint),FinalDiff.GetErrorYlow(gPoint)))
 
     CumuTurnOn = TurnOn(CumuNomList,CumuDenomList)
     for curve in CumuTurnOn.ListOfTurnOns():
@@ -179,14 +183,14 @@ def main():
       curve.GetXaxis().SetTitleSize(0.045)
       curve.GetYaxis().SetTitle("Cumulative Efficiency")
       curve.GetYaxis().SetTitleOffset(1.15)
-      if"AlphaT" in key: curve.GetXaxis().SetRangeUser(0.,3.)
+      if"AlphaT" in key: curve.GetXaxis().SetRangeUser(0.4,1.)
       else: curve.GetXaxis().SetRangeUser(0.,1000.)
       curve.Draw("ap")
       c1.Print()
     CumuTurnOn.TotDenominator.SetTitle("Total Cumulative Hists for %s"%(key))
     if "alpha" in axisTitle:
       CumuTurnOn.TotDenominator.GetYaxis().SetTitle("Cumulative Events / %1.4f"%(CumuTurnOn.TotDenominator.GetBinWidth(1)))
-      CumuTurnOn.TotDenominator.GetXaxis().SetRangeUser(0.,3.)
+      CumuTurnOn.TotDenominator.GetXaxis().SetRangeUser(0.4,1.)
     if "H_" in axisTitle:
       CumuTurnOn.TotDenominator.GetYaxis().SetTitle("Cumulative Events / %1.f GeV"%(CumuTurnOn.TotDenominator.GetBinWidth(1)))
     CumuTurnOn.TotDenominator.GetYaxis().SetLabelSize(0.035)
@@ -199,10 +203,10 @@ def main():
     FinalCumu = CumuTurnOn.SumOfTurnOns()
     FinalCumu.SetTitle("Total Cumulative Turn on for %s"%(key))
     FinalCumu.GetXaxis().SetTitle(axisTitle)
-    if "AlphaT" in key: 
-        FinalCumu.GetXaxis().SetRangeUser(0.,3.)
+    if "AlphaT" in key:
+        FinalCumu.GetXaxis().SetRangeUser(0.4,1.)
         FinalCumu.GetXaxis().SetTitle("#alpha_{T}^{cut}")
-    if "AlphaT" not in key: 
+    if "AlphaT" not in key:
         FinalCumu.GetXaxis().SetRangeUser(0.,1000.)
         FinalCumu.GetXaxis().SetTitle("H_{T}^{cut}")
     FinalCumu.GetYaxis().SetTitle("Cumulative Efficiency")
@@ -217,13 +221,13 @@ def main():
     c1.close()
 
     point = []
-    # for Point in range(FinalCumu.GetN()):
-    #   FinalCumu.GetPoint(Point,xVal,yVal)
-    #   print "XVAL =",xVal
-    #   if "AlphaT" in key:
-    #     if xVal > 0.60 and xVal < 0.61:
-    #       text +=("%s at %f %1.3f + %1.3f - %1.3f efficient  Cumu \n"%(key,xVal-0.005,yVal,FinalCumu.GetErrorYhigh(Point),FinalCumu.GetErrorYlow(Point)))
-    #   else:text +=("%s at %f %1.3f + %1.3f - %1.3f efficient  Cumu \n"%(key,xVal,yVal,FinalCumu.GetErrorYhigh(Point),FinalCumu.GetErrorYlow(Point)))
+    for Point in range(FinalCumu.GetN()):
+      FinalCumu.GetPoint(Point,xVal,yVal)
+      print "XVAL =",xVal
+      if "AlphaT" in key:
+        # if xVal > 0.60:# and xVal < 0.61:
+        text +=("%s at %f %1.3f + %1.3f - %1.3f efficient  Cumu \n"%(key,xVal-0.005,yVal,FinalCumu.GetErrorYhigh(Point),FinalCumu.GetErrorYlow(Point)))
+      else:text +=("%s at %f %1.3f + %1.3f - %1.3f efficient  Cumu \n"%(key,xVal,yVal,FinalCumu.GetErrorYhigh(Point),FinalCumu.GetErrorYlow(Point)))
 
 
     # if "AlphaT" in key:
@@ -241,7 +245,7 @@ def main():
     #       text +=("%s at %f %1.3f + %1.3f - %1.3f efficient  Cumu\n"%(key,xVal-(CumuTurnOn.TotDenominator.GetBinWidth(1)/2.),yVal,FinalCumu.GetErrorYhigh(gPoint),FinalCumu.GetErrorYlow(gPoint)))
     #       break
 
-  outFile = open("./EfficienciesForAllDiffPlotFinalAlphaTPlotBinning.txt",'w')
+  outFile = open("./useHadAlphaT/useHadAlphaTCumuTable.txt",'w')
   outFile.write(text)
   # print text
 

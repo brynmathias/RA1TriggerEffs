@@ -111,6 +111,8 @@ def main():
 
   weightList =[  1000.,   10.,  15.,  7.,   100.,  150.,  200.,  60.,  120.,  200.,  240.,  60.,  120.,  80.,  100.,  150.,  40.,  70.,]
   c1 = Print("HT300Try.pdf")
+  c1.DoPageNum = False
+  
   c1.open()
   rFile = r.TFile().Open("./5GeVMuonsVBTFIDWithOddMuonVeto/5GeVMuonsOddVetoVBTFidHT325.root")
   nomHist = None
@@ -152,8 +154,13 @@ def main():
   nomHist.Draw("p")
   denomHist.Draw("sameh")
   c1.Print()
-  a = nomHist.Clone()
-  a.Divide(denomHist)
+  bins = [i*25. for i in range(int(325./25.)) ]+[325.,1000.]
+  a = nomHist.Rebin(len(bins) -1 ,"a",array.array('d',  bins))
+  b = denomHist.Rebin(len(bins) - 1,"b",array.array('d',bins))
+  a.Divide(b)
+  a.GetXaxis().SetTitle("H_{T} (GeV)")
+  a.GetYaxis().SetTitle("Efficiency")
+  a.SetTitle("")
   a.Draw("p")
   a.GetYaxis().SetRangeUser(0.,1.2)
   c1.Print()
