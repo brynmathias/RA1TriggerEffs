@@ -11,8 +11,11 @@ import sys
 import os
 import ROOT as r
 from plottingUtils import *
+from sys import argv
 
-
+jMulti = "le3j"
+if len(argv)>1:
+  jMulti = argv[1]
 
 
 def MakeCumu(inHist):
@@ -26,95 +29,31 @@ def MakeCumu(inHist):
     return cumulativeHist
 
 
-
-"Denom_HLT_HT300_v12Pre_1000_HLT_DoubleMu8_Mass8_HT200_v4Pre_1",
-"Denom_HLT_HT300_v3Pre_10_HLT_Mu5_HT200_v4Pre_1"                ,
-"Denom_HLT_HT300_v3Pre_15_HLT_Mu5_HT200_v4Pre_1"                ,
-"Denom_HLT_HT300_v3Pre_7_HLT_Mu5_HT200_v4Pre_1"                 ,
-"Denom_HLT_HT300_v4Pre_100_HLT_Mu8_HT200_v4Pre_1"             ,
-"Denom_HLT_HT300_v4Pre_150_HLT_Mu8_HT200_v4Pre_1"             ,
-"Denom_HLT_HT300_v4Pre_200_HLT_Mu8_HT200_v4Pre_1"             ,
-"Denom_HLT_HT300_v4Pre_60_HLT_Mu8_HT200_v4Pre_1"              ,
-"Denom_HLT_HT300_v5Pre_120_HLT_Mu15_HT200_v2Pre_1"            ,
-"Denom_HLT_HT300_v5Pre_200_HLT_Mu15_HT200_v2Pre_1"            ,
-"Denom_HLT_HT300_v5Pre_240_HLT_Mu15_HT200_v2Pre_1"            ,
-"Denom_HLT_HT300_v5Pre_60_HLT_Mu15_HT200_v2Pre_1"             ,
-"Denom_HLT_HT300_v6Pre_120_HLT_Mu15_HT200_v3Pre_1"            ,
-"Denom_HLT_HT300_v6Pre_80_HLT_Mu15_HT200_v3Pre_1"             ,
-"Denom_HLT_HT300_v8Pre_100_HLT_Mu30_HT200_v1Pre_1"            ,
-"Denom_HLT_HT300_v8Pre_150_HLT_Mu30_HT200_v1Pre_1"            ,
-"Denom_HLT_HT300_v8Pre_40_HLT_Mu30_HT200_v1Pre_1"             ,
-"Denom_HLT_HT300_v8Pre_70_HLT_Mu30_HT200_v1Pre_1"             ,
-
-
-
-
-
 def main():
-  dirList = ["DEBUG_DiMu_HT0_HLT_HT300_v12_HLT_DoubleMu8_Mass8_HT200_v4",
-"DEBUG_DiMu_HT0_HLT_HT300_v3_HLT_Mu5_HT200_v4",
-"DEBUG_DiMu_HT0_HLT_HT300_v3_HLT_Mu5_HT200_v4",
-"DEBUG_DiMu_HT0_HLT_HT300_v3_HLT_Mu5_HT200_v4",
-"DEBUG_DiMu_HT0_HLT_HT300_v4_HLT_Mu8_HT200_v4",
-"DEBUG_DiMu_HT0_HLT_HT300_v4_HLT_Mu8_HT200_v4",
-"DEBUG_DiMu_HT0_HLT_HT300_v4_HLT_Mu8_HT200_v4",
-"DEBUG_DiMu_HT0_HLT_HT300_v4_HLT_Mu8_HT200_v4",
-"DEBUG_DiMu_HT0_HLT_HT300_v5_HLT_Mu15_HT200_v2",
-"DEBUG_DiMu_HT0_HLT_HT300_v5_HLT_Mu15_HT200_v2",
-"DEBUG_DiMu_HT0_HLT_HT300_v5_HLT_Mu15_HT200_v2",
-"DEBUG_DiMu_HT0_HLT_HT300_v5_HLT_Mu15_HT200_v2",
-"DEBUG_DiMu_HT0_HLT_HT300_v6_HLT_Mu15_HT200_v3",
-"DEBUG_DiMu_HT0_HLT_HT300_v6_HLT_Mu15_HT200_v3",
-"DEBUG_DiMu_HT0_HLT_HT300_v8_HLT_Mu30_HT200_v1",
-"DEBUG_DiMu_HT0_HLT_HT300_v8_HLT_Mu30_HT200_v1",
-"DEBUG_DiMu_HT0_HLT_HT300_v8_HLT_Mu30_HT200_v1",
-"DEBUG_DiMu_HT0_HLT_HT300_v8_HLT_Mu30_HT200_v1",]
 
-  histList = ["Nom_HLT_HT300_v12Pre_1000_HLT_DoubleMu8_Mass8_HT200_v4Pre_1",
-"Nom_HLT_HT300_v3Pre_10_HLT_Mu5_HT200_v4Pre_1"                ,
-"Nom_HLT_HT300_v3Pre_15_HLT_Mu5_HT200_v4Pre_1"                ,
-"Nom_HLT_HT300_v3Pre_7_HLT_Mu5_HT200_v4Pre_1"                 ,
-"Nom_HLT_HT300_v4Pre_100_HLT_Mu8_HT200_v4Pre_1"             ,
-"Nom_HLT_HT300_v4Pre_150_HLT_Mu8_HT200_v4Pre_1"             ,
-"Nom_HLT_HT300_v4Pre_200_HLT_Mu8_HT200_v4Pre_1"             ,
-"Nom_HLT_HT300_v4Pre_60_HLT_Mu8_HT200_v4Pre_1"              ,
-"Nom_HLT_HT300_v5Pre_120_HLT_Mu15_HT200_v2Pre_1"            ,
-"Nom_HLT_HT300_v5Pre_200_HLT_Mu15_HT200_v2Pre_1"            ,
-"Nom_HLT_HT300_v5Pre_240_HLT_Mu15_HT200_v2Pre_1"            ,
-"Nom_HLT_HT300_v5Pre_60_HLT_Mu15_HT200_v2Pre_1"             ,
-"Nom_HLT_HT300_v6Pre_120_HLT_Mu15_HT200_v3Pre_1"            ,
-"Nom_HLT_HT300_v6Pre_80_HLT_Mu15_HT200_v3Pre_1"             ,
-"Nom_HLT_HT300_v8Pre_100_HLT_Mu30_HT200_v1Pre_1"            ,
-"Nom_HLT_HT300_v8Pre_150_HLT_Mu30_HT200_v1Pre_1"            ,
-"Nom_HLT_HT300_v8Pre_40_HLT_Mu30_HT200_v1Pre_1"             ,
-"Nom_HLT_HT300_v8Pre_70_HLT_Mu30_HT200_v1Pre_1"             ,]
-
-  histList2 = ["Denom_HLT_HT300_v12Pre_1000_HLT_DoubleMu8_Mass8_HT200_v4Pre_1",
-"Denom_HLT_HT300_v3Pre_10_HLT_Mu5_HT200_v4Pre_1"                ,
-"Denom_HLT_HT300_v3Pre_15_HLT_Mu5_HT200_v4Pre_1"                ,
-"Denom_HLT_HT300_v3Pre_7_HLT_Mu5_HT200_v4Pre_1"                 ,
-"Denom_HLT_HT300_v4Pre_100_HLT_Mu8_HT200_v4Pre_1"             ,
-"Denom_HLT_HT300_v4Pre_150_HLT_Mu8_HT200_v4Pre_1"             ,
-"Denom_HLT_HT300_v4Pre_200_HLT_Mu8_HT200_v4Pre_1"             ,
-"Denom_HLT_HT300_v4Pre_60_HLT_Mu8_HT200_v4Pre_1"              ,
-"Denom_HLT_HT300_v5Pre_120_HLT_Mu15_HT200_v2Pre_1"            ,
-"Denom_HLT_HT300_v5Pre_200_HLT_Mu15_HT200_v2Pre_1"            ,
-"Denom_HLT_HT300_v5Pre_240_HLT_Mu15_HT200_v2Pre_1"            ,
-"Denom_HLT_HT300_v5Pre_60_HLT_Mu15_HT200_v2Pre_1"             ,
-"Denom_HLT_HT300_v6Pre_120_HLT_Mu15_HT200_v3Pre_1"            ,
-"Denom_HLT_HT300_v6Pre_80_HLT_Mu15_HT200_v3Pre_1"             ,
-"Denom_HLT_HT300_v8Pre_100_HLT_Mu30_HT200_v1Pre_1"            ,
-"Denom_HLT_HT300_v8Pre_150_HLT_Mu30_HT200_v1Pre_1"            ,
-"Denom_HLT_HT300_v8Pre_40_HLT_Mu30_HT200_v1Pre_1"             ,
-"Denom_HLT_HT300_v8Pre_70_HLT_Mu30_HT200_v1Pre_1"             ,]
+  if jMulti == "le3j":
+    #le3j
+    dirList = ['DEBUG_le3j_HLT_HT300_v3_HLT_IsoMu24_v15', 'DEBUG_le3j_HLT_HT300_v3_HLT_IsoMu24_v15', 'DEBUG_le3j_HLT_HT300_v2_HLT_IsoMu24_eta2p1_v12', 'DEBUG_le3j_HLT_HT300_v1_HLT_IsoMu24_eta2p1_v11', 'DEBUG_le3j_HLT_HT300_v7_HLT_IsoMu24_v17', 'DEBUG_le3j_HLT_HT300_v7_HLT_IsoMu24_v17', 'DEBUG_le3j_HLT_HT300_v5_HLT_IsoMu24_v16', 'DEBUG_le3j_HLT_HT300_v5_HLT_IsoMu24_v16', 'DEBUG_le3j_HLT_HT300_v4_HLT_IsoMu24_v15', 'DEBUG_le3j_HLT_HT300_v4_HLT_IsoMu24_v15']
+    histList = ['Nom_HLT_HT300_v3Pre_1000_HLT_IsoMu24_v15Pre_1', 'Nom_HLT_HT300_v3Pre_1200_HLT_IsoMu24_v15Pre_1', 'Nom_HLT_HT300_v2Pre_1000_HLT_IsoMu24_eta2p1_v12Pre_1', 'Nom_HLT_HT300_v1Pre_1000_HLT_IsoMu24_eta2p1_v11Pre_1', 'Nom_HLT_HT300_v7Pre_1000_HLT_IsoMu24_v17Pre_1', 'Nom_HLT_HT300_v7Pre_1200_HLT_IsoMu24_v17Pre_1', 'Nom_HLT_HT300_v5Pre_1200_HLT_IsoMu24_v16Pre_1', 'Nom_HLT_HT300_v5Pre_1000_HLT_IsoMu24_v16Pre_1', 'Nom_HLT_HT300_v4Pre_1000_HLT_IsoMu24_v15Pre_1', 'Nom_HLT_HT300_v4Pre_1200_HLT_IsoMu24_v15Pre_1']
+    histList2 = ['Denom_HLT_HT300_v3Pre_1000_HLT_IsoMu24_v15Pre_1', 'Denom_HLT_HT300_v3Pre_1200_HLT_IsoMu24_v15Pre_1', 'Denom_HLT_HT300_v2Pre_1000_HLT_IsoMu24_eta2p1_v12Pre_1', 'Denom_HLT_HT300_v1Pre_1000_HLT_IsoMu24_eta2p1_v11Pre_1', 'Denom_HLT_HT300_v7Pre_1000_HLT_IsoMu24_v17Pre_1', 'Denom_HLT_HT300_v7Pre_1200_HLT_IsoMu24_v17Pre_1', 'Denom_HLT_HT300_v5Pre_1200_HLT_IsoMu24_v16Pre_1', 'Denom_HLT_HT300_v5Pre_1000_HLT_IsoMu24_v16Pre_1', 'Denom_HLT_HT300_v4Pre_1000_HLT_IsoMu24_v15Pre_1', 'Denom_HLT_HT300_v4Pre_1200_HLT_IsoMu24_v15Pre_1']
+    weightList = [1000.0, 1200.0, 1000.0, 1000.0, 1000.0, 1200.0, 1200.0, 1000.0, 1000.0, 1200.0]
+    c1 = Print("plotDump/HT300_le3j.pdf")
+    textFileName = "textDump/eff_HT300_le3j.txt"
+  elif jMulti == "ge4j":
+    #ge4j
+    dirList = ['DEBUG_ge4j_HLT_HT300_v3_HLT_IsoMu24_v15', 'DEBUG_ge4j_HLT_HT300_v3_HLT_IsoMu24_v15', 'DEBUG_ge4j_HLT_HT300_v2_HLT_IsoMu24_eta2p1_v12', 'DEBUG_ge4j_HLT_HT300_v1_HLT_IsoMu24_eta2p1_v11', 'DEBUG_ge4j_HLT_HT300_v7_HLT_IsoMu24_v17', 'DEBUG_ge4j_HLT_HT300_v7_HLT_IsoMu24_v17', 'DEBUG_ge4j_HLT_HT300_v5_HLT_IsoMu24_v16', 'DEBUG_ge4j_HLT_HT300_v5_HLT_IsoMu24_v16', 'DEBUG_ge4j_HLT_HT300_v4_HLT_IsoMu24_v15', 'DEBUG_ge4j_HLT_HT300_v4_HLT_IsoMu24_v15']
+    histList = ['Nom_HLT_HT300_v3Pre_1000_HLT_IsoMu24_v15Pre_1', 'Nom_HLT_HT300_v3Pre_1200_HLT_IsoMu24_v15Pre_1', 'Nom_HLT_HT300_v2Pre_1000_HLT_IsoMu24_eta2p1_v12Pre_1', 'Nom_HLT_HT300_v1Pre_1000_HLT_IsoMu24_eta2p1_v11Pre_1', 'Nom_HLT_HT300_v7Pre_1000_HLT_IsoMu24_v17Pre_1', 'Nom_HLT_HT300_v7Pre_1200_HLT_IsoMu24_v17Pre_1', 'Nom_HLT_HT300_v5Pre_1200_HLT_IsoMu24_v16Pre_1', 'Nom_HLT_HT300_v5Pre_1000_HLT_IsoMu24_v16Pre_1', 'Nom_HLT_HT300_v4Pre_1200_HLT_IsoMu24_v15Pre_1', 'Nom_HLT_HT300_v4Pre_1000_HLT_IsoMu24_v15Pre_1']
+    histList2 = ['Denom_HLT_HT300_v3Pre_1000_HLT_IsoMu24_v15Pre_1', 'Denom_HLT_HT300_v3Pre_1200_HLT_IsoMu24_v15Pre_1', 'Denom_HLT_HT300_v2Pre_1000_HLT_IsoMu24_eta2p1_v12Pre_1', 'Denom_HLT_HT300_v1Pre_1000_HLT_IsoMu24_eta2p1_v11Pre_1', 'Denom_HLT_HT300_v7Pre_1000_HLT_IsoMu24_v17Pre_1', 'Denom_HLT_HT300_v7Pre_1200_HLT_IsoMu24_v17Pre_1', 'Denom_HLT_HT300_v5Pre_1200_HLT_IsoMu24_v16Pre_1', 'Denom_HLT_HT300_v5Pre_1000_HLT_IsoMu24_v16Pre_1', 'Denom_HLT_HT300_v4Pre_1200_HLT_IsoMu24_v15Pre_1', 'Denom_HLT_HT300_v4Pre_1000_HLT_IsoMu24_v15Pre_1']
+    weightList = [1000.0, 1200.0, 1000.0, 1000.0, 1000.0, 1200.0, 1200.0, 1000.0, 1200.0, 1000.0]
+    c1 = Print("plotDump/HT300_ge4j.pdf")
+    textFileName = "textDump/eff_HT300_ge4j.txt"
 
 
-  weightList =[  1000.,   10.,  15.,  7.,   100.,  150.,  200.,  60.,  120.,  200.,  240.,  60.,  120.,  80.,  100.,  150.,  40.,  70.,]
-  c1 = Print("HT300Try.pdf")
   c1.DoPageNum = False
+  c1.SetGrid(True)
   
   c1.open()
-  rFile = r.TFile().Open("./5GeVMuonsVBTFIDWithOddMuonVeto/5GeVMuonsOddVetoVBTFidHT325.root")
+  rFile = r.TFile().Open("../14Dec_ABCD/rootfiles/outSinMu_ABCD_HT_trigEffs.root")
   nomHist = None
   denomHist = None
   eh =  [1.15, 1.36, 1.53, 1.73, 1.98, 2.21, 2.42, 2.61, 2.80, 3.00 ]
@@ -124,9 +63,12 @@ def main():
     currentHist = curFile.Get(hist)
     print currentHist.GetName()
     print type(currentHist)
-    currentHist.Rebin(25)
+    #currentHist.Rebin(25)
     for bin in range(currentHist.GetNbinsX()):
-      error = math.sqrt(((currentHist.GetBinContent(bin)+1)*weight)-1)
+      if not currentHist.GetBinContent(bin) == 0:
+        error = math.sqrt(currentHist.GetBinContent(bin))*weight
+      else:
+        error = 0
       value = currentHist.GetBinContent(bin)*weight
       currentHist.SetBinContent(bin,value)
       currentHist.SetBinError(bin,error)
@@ -138,7 +80,7 @@ def main():
   for dir,hist in zip(dirList,histList2):
     curFile = rFile.Get(dir)
     currentDenom = curFile.Get(hist)
-    currentDenom.Rebin(25)
+    #currentDenom.Rebin(25)
     for bin in range(currentDenom.GetNbinsX()):
       if currentDenom.GetBinContent(bin) < 10.:
         n = int(currentDenom.GetBinContent(bin))
@@ -147,16 +89,23 @@ def main():
       denomHist = currentDenom.Clone()
     else:
       denomHist.Add(currentDenom)
-  # nomHist.Rebin(25)
-  # denomHist.Rebin(25)
+  #force 25GeV binning
+  nomHist.Rebin(25)
+  denomHist.Rebin(25)
+  
   nomHist.SetMarkerStyle(20)
   denomHist.SetLineColor(2)
   nomHist.Draw("p")
+
+  nomHist.SetTitle("")
+  denomHist.SetTitle("")
+  
   denomHist.Draw("sameh")
   c1.Print()
-  bins = [i*25. for i in range(int(325./25.)) ]+[325.,1000.]
+  bins = [i*25. for i in range(int(275./25.)) ]+[325.,1000.]
   a = nomHist.Rebin(len(bins) -1 ,"a",array.array('d',  bins))
   b = denomHist.Rebin(len(bins) - 1,"b",array.array('d',bins))
+  
   a.Divide(b)
   a.GetXaxis().SetTitle("H_{T} (GeV)")
   a.GetYaxis().SetTitle("Efficiency")
@@ -164,8 +113,10 @@ def main():
   a.Draw("p")
   a.GetYaxis().SetRangeUser(0.,1.2)
   c1.Print()
+  
   cumuNom = MakeCumu(nomHist)
   cumuDenom = MakeCumu(denomHist)
+  
   cumuNom.Draw("p")
   cumuDenom.Draw("histsame")
   c1.Print()
@@ -174,10 +125,17 @@ def main():
   for bin in range(b.GetNbinsX()):
     if int(b.GetBinLowEdge(bin)) == 325:
       print"X = %f, Red = %f pm %f"%(b.GetBinLowEdge(bin),b.GetBinContent(bin), b.GetBinError(bin))
+      #text = "HT = %f, eff = %f + %f - %f"%(b.GetBinLowEdge(bin), b.GetBinContent(bin), b.GetBinErrorUp(bin), b.GetBinErrorLow(bin))
+      text = "HT = %f, eff = %f \pm %f"%(b.GetBinLowEdge(bin), b.GetBinContent(bin), b.GetBinError(bin))
+  
+  textFile = open(textFileName, 'w')
+  textFile.write(text)
+
   b.GetYaxis().SetRangeUser(0.,1.2)
   b.Draw("p")
   c1.Print()
   c1.close()
+
 if __name__ == '__main__':
   main()
 
