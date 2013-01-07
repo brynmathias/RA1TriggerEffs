@@ -6,6 +6,7 @@ textDump/
 
 ### file types ###
 
+*.sh
 *.pdf
 *.png
 *.pyc
